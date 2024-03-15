@@ -1,0 +1,468 @@
+@import "https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans:wght@500&family=Oswald:wght@200;300;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+.normal-font, .roboto-black, .roboto-bold, .roboto-medium, .roboto-regular, .roboto-light, .roboto-thin {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.italic-font, .roboto-black-italic, .roboto-bold-italic, .roboto-medium-italic, .roboto-regular-italic, .roboto-light-italic, .roboto-thin-italic {
+  font-family: Roboto, sans-serif;
+  font-style: italic;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.container {
+  background-color: #cad2e0;
+  height: 100vh;
+}
+
+.login-box-height {
+  grid-area: col;
+}
+
+.login-box-width {
+  grid-area: ro;
+}
+
+.form__login--box {
+  background-color: #f5efef;
+  border-radius: 15px;
+  grid-template-areas: "col"
+                       "ro";
+  row-gap: 40px;
+  width: 400px;
+  margin: auto;
+  padding: 40px 10px;
+  display: grid;
+  box-shadow: 0 2px 5px -1px #32325d40, 0 1px 3px -1px #0000004d;
+}
+
+.form__login--box .imgcontainer {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.form__login--box .imgcontainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form__login--box .imgcontainer h1 {
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.form__login--box .form {
+  row-gap: 7px;
+  width: 70%;
+  margin: auto;
+  display: grid;
+}
+
+.form__login--box .form label {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.form__login--box .form .box-btn {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 25px auto;
+  display: flex;
+}
+
+.grid-container {
+  background-color: #f5efef;
+  border-radius: 15px;
+  grid-template-areas: "title title title"
+                       "btnBox btnBox btnBox"
+                       "taskBox taskBox taskBox";
+  gap: 10px;
+  width: 70%;
+  margin: auto;
+  padding: 30px 110px;
+  display: grid;
+  position: relative;
+  box-shadow: 0 4px 16px #11111a1a, 0 8px 32px #11111a0d;
+}
+
+.grid-container .main__title {
+  text-align: center;
+  grid-area: title;
+  margin-bottom: 30px;
+}
+
+.grid-container .main__title h1 {
+  letter-spacing: 1.5px;
+  color: #6d727a;
+  text-transform: capitalize;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.grid-container .btn__box {
+  grid-area: btnBox;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.grid-container .btn__box .select__box {
+  color: #fff;
+  background-color: #528cc8;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  padding: 12px 24px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.grid-container .taskes__box {
+  background-color: #bec2c33b;
+  border-radius: 15px;
+  grid-area: taskBox;
+  margin-bottom: 50px;
+  padding: 5px 20px;
+}
+
+.grid-container .taskes__box .task__row {
+  background-color: #f5efef;
+  border-radius: 10px;
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.grid-container .taskes__box .task__row .content__task {
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+
+.grid-container .taskes__box .task__row .content__task .text {
+  position: relative;
+}
+
+.grid-container .taskes__box .task__row .content__task .text .circle__logo {
+  border-radius: 50%;
+  justify-content: space-around;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  position: absolute;
+  top: 7px;
+  left: -23px;
+}
+
+.grid-container .taskes__box .task__row .content__task .text h3 {
+  text-transform: capitalize;
+  color: #6d727a;
+  margin: 5px;
+  font-size: 2rem;
+}
+
+.grid-container .taskes__box .task__row .content__task .text p.date {
+  font-size: 1.5rem;
+}
+
+.grid-container .taskes__box .task__row .content__task .text p.description {
+  color: #383739;
+  width: 100%;
+  margin: 5px 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.grid-container .taskes__box .task__row .content__task .icons .icone__remove--task .close {
+  color: #fff;
+  cursor: pointer;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  justify-content: space-around;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.normal-font, .roboto-thin, .roboto-light, .roboto-regular, .roboto-medium, .roboto-bold, .roboto-black {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.roboto-thin {
+  font-weight: 100;
+}
+
+.roboto-light {
+  font-weight: 300;
+}
+
+.roboto-regular {
+  font-weight: 400;
+}
+
+.roboto-medium {
+  font-weight: 500;
+}
+
+.roboto-bold {
+  font-weight: 700;
+}
+
+.roboto-black {
+  font-weight: 900;
+}
+
+.italic-font, .roboto-thin-italic, .roboto-light-italic, .roboto-regular-italic, .roboto-medium-italic, .roboto-bold-italic, .roboto-black-italic {
+  font-family: Roboto, sans-serif;
+  font-style: italic;
+}
+
+.roboto-thin-italic {
+  font-weight: 100;
+}
+
+.roboto-light-italic {
+  font-weight: 300;
+}
+
+.roboto-regular-italic {
+  font-weight: 400;
+}
+
+.roboto-medium-italic {
+  font-weight: 500;
+}
+
+.roboto-bold-italic {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.roboto-black-italic {
+  font-weight: 900;
+}
+
+.flex-column, .container {
+  flex-direction: column;
+  place-content: center;
+  display: flex;
+}
+
+.format-inputs, .form__login--box .form input {
+  background-color: #fdfdfd;
+  border: none;
+  border-bottom: 2px solid #0000;
+  border-radius: 7px;
+  outline: none;
+  width: 100%;
+  margin: auto;
+  padding: 10px 8px;
+  transition: all .5s;
+}
+
+.format-inputs::placeholder, .form__login--box .form input::placeholder {
+  opacity: .6;
+  text-transform: capitalize;
+  color: #383739;
+}
+
+.format-inputs:focus, .form__login--box .form input:focus {
+  border-bottom: 2px solid #528cc8;
+}
+
+.btn {
+  appearance: button;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  background-color: #528cc8;
+  background-image: linear-gradient(to right, #457fca 0%, #5691c8 51%, #457fca 100%);
+  background-size: 200%;
+  border-width: 0;
+  border-radius: 6px;
+  outline: none;
+  padding: 15px 30px;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  transition: all .8s, box-shadow 80ms ease-in;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  box-shadow: inset 0 0 0 1px #32325d1a, 0 2px 5px #32325d1a, 0 1px 1px #00000012;
+}
+
+.btn svg {
+  fill: currentColor;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.btn:hover {
+  color: #fff;
+  background-position: 100%;
+  border: 2px #0000;
+}
+
+.overlay {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  background-color: #0006;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.logo__checked {
+  background-color: green;
+}
+
+.spinner {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.spinner svg {
+  fill: #528cc8;
+  width: 6rem;
+  height: 6rem;
+  animation: 2s linear infinite rotate;
+}
+
+.add-task-window {
+  z-index: 105;
+  z-index: 1000;
+  background-color: #f5efef;
+  border-radius: 10px;
+  width: 50rem;
+  margin: auto;
+  padding: 3rem;
+  transition: all .5s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4rem 6rem #00000040;
+}
+
+.add-task-window .task__window--hero {
+  padding: 1rem 0;
+  position: relative;
+}
+
+.add-task-window .task__window--hero figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.add-task-window .task__window--hero h3 {
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.add-task-window .btn--close-modal {
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 3.5rem;
+  position: absolute;
+  top: .5rem;
+  right: 1.6rem;
+}
+
+.add-task-window .upload__task {
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.add-task-window .upload__task input {
+  width: 100%;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.add-task-window .upload__task .input__task--name {
+  margin: 20px auto;
+}
+
+/*# sourceMappingURL=index.f7626f62.css.map */
